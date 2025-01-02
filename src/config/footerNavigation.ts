@@ -35,13 +35,13 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'Thuuba Digital',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'Innovate. Transform. Empower.',
 		logo: {
 			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			alt: 'Thuuba Digital',
+			text: 'Thuuba Digital'
 		}
 	},
 	footerColumns: [
@@ -49,25 +49,25 @@ export const footerNavigationData: FooterData = {
 			category: 'Product',
 			subCategories: [
 				{
-					subCategory: 'Features',
+					subCategory: 'Solution',
 					subCategoryLink: '/features'
 				},
 				{
 					subCategory: 'FAQ',
 					subCategoryLink: '/faq'
 				},
-				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
-				},
-				{
-					subCategory: 'Changelog',
-					subCategoryLink: '/changelog'
-				},
-				{
-					subCategory: 'Terms',
-					subCategoryLink: '/terms'
-				}
+				// {
+				// 	subCategory: 'Pricing',
+				// 	subCategoryLink: '/pricing'
+				// },
+				// {
+				// 	subCategory: 'Changelog',
+				// 	subCategoryLink: '/changelog'
+				// },
+				// {
+				// 	subCategory: 'Terms',
+				// 	subCategoryLink: '/terms'
+				// }
 			]
 		},
 		{
@@ -81,10 +81,10 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'News',
 					subCategoryLink: '/blog'
 				},
-				{
-					subCategory: 'Careers',
-					subCategoryLink: '/blog'
-				}
+				// {
+				// 	subCategory: 'Careers',
+				// 	subCategoryLink: '/blog'
+				// }
 			]
 		},
 		{
@@ -94,18 +94,18 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'Contact',
 					subCategoryLink: '/contact'
 				},
-				{
-					subCategory: 'Support',
-					subCategoryLink: '/contact'
-				},
-				{
-					subCategory: 'Join us',
-					subCategoryLink: '/contact'
-				}
+				// {
+				// 	subCategory: 'Support',
+				// 	subCategoryLink: '/contact'
+				// },
+				// {
+				// 	subCategory: 'Join us',
+				// 	subCategoryLink: '/contact'
+				// }
 			]
 		}
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText: '© Thuuba Digital 2025.'
 	}
 }
