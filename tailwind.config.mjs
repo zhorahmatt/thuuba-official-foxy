@@ -32,17 +32,17 @@ export default {
       colors: {
         transparent: "transparent",
         primary: {
-          50: "#fdf2f8",
-          100: "#fce7f3",
-          200: "#fbcfe8",
-          300: "#f9a8d4",
-          400: "#f472b6",
-          500: "#E2187D",
-          600: "#db2777",
-          700: "#be185d",
-          800: "#9d174d",
-          900: "#831843",
-          950: "#500724",
+          50: "#e9f9f5",
+          100: "#cff4ec",
+          200: "#a8ebde",
+          300: "#81e3d0",
+          400: "#5adbc2",
+          500: "#48cfae", // Your primary color
+          600: "#3fb194",
+          700: "#358b79",
+          800: "#2a685f",
+          900: "#204d47",
+          950: "#0f2d28",
         },
         neutral: {
           50: "#f8fafc",

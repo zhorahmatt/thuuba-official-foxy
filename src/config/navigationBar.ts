@@ -34,24 +34,25 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/logo.svg',
-		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		alt: 'Thuuba Logo',
+		text: 'Thuuba Digital'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
-		{ name: 'Pricing', link: '/pricing' },
-		{ name: 'Features', link: '/features' },
-		{
-			name: 'Resources',
-			link: '#',
-			submenu: [
-				{ name: 'Blog', link: '/blog' },
-				{ name: 'Changelog', link: '/changelog' },
-				{ name: 'FAQ', link: '/faq' },
-				{ name: 'Terms', link: '/terms' }
-			]
-		},
-		{ name: 'Contact', link: '/contact' }
+		{ name: 'Solution', link: '/pricing' },
+		{ name: 'FAQ', link: '/faq' },
+		{ name: 'Works', link: '/works' },
+		// {
+		// 	name: 'Resources',
+		// 	link: '#',
+		// 	submenu: [
+		// 		{ name: 'Blog', link: '/blog' },
+		// 		{ name: 'Changelog', link: '/changelog' },
+		// 		{ name: 'FAQ', link: '/faq' },
+		// 		{ name: 'Terms', link: '/terms' }
+		// 	]
+		// },
+		// { name: 'Contact', link: '/contact' }
 	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	navActions: [{ name: 'Contact Us', link: 'https://wa.me/6281928828180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi', style: 'primary', size: 'lg' }]
 }
