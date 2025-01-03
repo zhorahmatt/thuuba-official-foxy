@@ -50,11 +50,11 @@ export const footerNavigationData: FooterData = {
 			subCategories: [
 				{
 					subCategory: 'Solution',
-					subCategoryLink: '/features'
+					subCategoryLink: '/solution'
 				},
 				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
+					subCategory: 'Works',
+					subCategoryLink: '/works'
 				},
 				// {
 				// 	subCategory: 'Pricing',
@@ -77,10 +77,10 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'About us',
 					subCategoryLink: '/'
 				},
-				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
-				},
+				// {
+				// 	subCategory: 'News',
+				// 	subCategoryLink: '/blog'
+				// },
 				// {
 				// 	subCategory: 'Careers',
 				// 	subCategoryLink: '/blog'
@@ -91,8 +91,8 @@ export const footerNavigationData: FooterData = {
 			category: 'Get in touch',
 			subCategories: [
 				{
-					subCategory: 'Contact',
-					subCategoryLink: '/contact'
+					subCategory: 'hi.thuuba@gmail.com',
+					subCategoryLink: '/'
 				},
 				// {
 				// 	subCategory: 'Support',
