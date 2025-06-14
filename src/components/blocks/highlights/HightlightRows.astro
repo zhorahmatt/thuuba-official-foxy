@@ -6,6 +6,8 @@
 // Components
 // - UI
 import TextImage from '../basic/TextImage.astro'
+import Button from '../../ui/Button.astro'
+import { Icon } from 'astro-icon/components'
 
 // Content
 import highlight01 from '../../../assets/highlights/highlight-011.svg'
@@ -25,6 +27,7 @@ type HighlightBlock = {
 	imageWidth: number
 	imageHeight: number
 	imagePosition: 'left' | 'right'
+	features: string[]
 }
 const highlightBlocks: HighlightBlock[] = [
 	{
@@ -34,57 +37,141 @@ const highlightBlocks: HighlightBlock[] = [
 		imageWidth: highlight01.width,
 		imageHeight: highlight01.height,
 		mobileImage: highlight01mobile,
-		imagePosition: 'right'
+		imagePosition: 'right',
+		features: [
+			'Data-driven process optimization',
+			'AI-powered business intelligence',
+			'Digital workflow automation',
+			'Measurable ROI and performance metrics'
+		]
 	},
 	{
 		title: '<strong>Seamless</strong> Technology Solutions',
-		text: 'We create Exceptional Mobile apps for iOS and Android, design seamless websites with outstanding functionality, and deliver e-commerce solutions that drive business growth. Our expert SEO services ensure your brand stands out with enhanced visibility and top search rankings.',
+		text: 'We create exceptional digital experiences across platforms that drive business growth and enhance user engagement.',
 		image: highlight02,
 		mobileImage: highlight02mobile,
 		imageWidth: highlight02.width,
 		imageHeight: highlight02.height,
-		imagePosition: 'left'
+		imagePosition: 'left',
+		features: [
+			'Responsive web applications',
+			'Native mobile experiences',
+			'E-commerce platforms with AI integration',
+			'SEO optimization and visibility enhancement'
+		]
 	},
 	{
 		title: '<strong>Tech </strong>Consulting & Strategy',
-		text: 'Partnering with us means gaining access to a team of experienced professionals who understand the ever-evolving tech landscape. We provide tailored insights and actionable strategies to address your unique challenges and opportunities. Whether it’s optimizing your existing systems, adopting new technologies, or creating a roadmap for digital transformation, we’re here to guide you every step of the way. With our expertise, you can make informed decisions, streamline operations, and achieve sustainable growth in a competitive digital world.',
+		text: 'Partnering with us means gaining access to a team of experienced professionals who understand the ever-evolving tech landscape.',
 		image: highlight03,
 		mobileImage: highlight03mobile,
 		imageWidth: highlight03.width,
 		imageHeight: highlight03.height,
-		imagePosition: 'right'
+		imagePosition: 'right',
+		features: [
+			'Technology stack assessment and recommendations',
+			'Digital transformation roadmapping',
+			'IT infrastructure optimization',
+			'Emerging technology integration'
+		]
 	},
 	{
 		title: '<strong>Creative</strong> Storytelling & Digital Experiences',
-		text: 'We are innovative storytellers dedicated to driving brand growth through tailored solutions, including Brand Development, intuitive UI/UX Design for seamless apps, engaging Content Creation, and powerful Motion & Videography crafted specifically for your brand',
+		text: 'We are innovative storytellers dedicated to driving brand growth through tailored solutions.',
 		image: highlight04,
 		mobileImage: highlight04mobile,
 		imageWidth: highlight04.width,
 		imageHeight: highlight04.height,
-		imagePosition: 'left'
+		imagePosition: 'left',
+		features: [
+			'Brand identity development',
+			'Intuitive UI/UX design',
+			'Content strategy and creation',
+			'Motion design and videography'
+		]
 	}
 ]
 ---
 
-<section class="mt-16 md:mt-16 mb-8">
-  <h2 class="h2 text-center">Our Solutions</h2>
-  <p class="basic-text text-center max-w-2xl mx-auto mb-8">
-    We provide a comprehensive suite of digital solutions designed to help your business grow, innovate, and stay ahead in a rapidly changing world. Explore our core services below:
-  </p>
-</section>
+<section class="relative py-16 md:py-24 overflow-hidden">
+  
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header with Animated Badge -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600">Our Solutions</span>
+      </h2>
+      <p class="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+        We provide a comprehensive suite of digital solutions designed to help your business grow, innovate, and stay ahead in a rapidly changing world.
+      </p>
+    </div>
+  </div>
 
-{
-  highlightBlocks.map((highlight, key) => (
-    <TextImage
-      id={`highlight-${key}`}
-      title={highlight.title}
-      text={highlight.text}
-      image={highlight.image}
-      imageWidth={highlight.imageWidth}
-      imageHeight={highlight.imageHeight}
-      mobileImage={highlight.mobileImage}
-      imagePosition={highlight.imagePosition}
-      classes={key === 0 ? '!pb-0' : key === highlightBlocks.length - 1 ? '!pt-0' : '!py-0'}
-    />
-  ))
-}
+  {highlightBlocks.map((highlight, key) => (
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 last:mb-12">
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image Column -->
+        <div class={`relative ${highlight.imagePosition === 'right' ? 'lg:order-2' : ''}`}>
+          <div class="relative z-10 transform transition-all duration-500 hover:scale-105 hover:rotate-1">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-primary-400/20 to-primary-600/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <picture class="block rounded-2xl overflow-hidden shadow-xl">
+              {highlight.mobileImage && <source srcset={highlight.mobileImage.src} media="(max-width: 1024px)" />}
+              <img 
+                src={highlight.image.src} 
+                alt={highlight.title.replace(/<[^>]*>/g, '')} 
+                width={highlight.imageWidth} 
+                height={highlight.imageHeight}
+                class="w-full h-auto"
+              />
+            </picture>
+          </div>
+          <!-- Decorative Elements -->
+          <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-primary-500/10 rounded-full hidden lg:block"></div>
+          <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary-500/10 rounded-full hidden lg:block"></div>
+        </div>
+        
+        <!-- Content Column -->
+        <div class={`relative ${highlight.imagePosition === 'right' ? 'lg:order-1' : ''}`}>
+          <div class="space-y-6">
+            <h3 class="text-3xl font-bold tracking-tight" set:html={highlight.title} />
+            <div class="h-1 w-20 bg-primary-500 rounded-full"></div>
+            <p class="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">{highlight.text}</p>
+            
+            <!-- Feature Bullets -->
+            <div class="mt-8 space-y-4">
+              {highlight.features.map(feature => (
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900">
+                      {/* <Icon name="check" class="w-4 h-4 text-primary-600 dark:text-primary-400" /> */}
+                    </div>
+                  </div>
+                  <p class="ml-3 text-base text-neutral-600 dark:text-neutral-300">{feature}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+  
+  <!-- CTA Button -->
+  <div class="text-center mt-12 mb-8">
+    <Button 
+      type="link" 
+      link="/services" 
+      style="primary" 
+      size="lg" 
+      elevated={true}
+      classes="group relative overflow-hidden"
+    >
+      <span class="relative z-10 flex items-center">
+        Explore All Services
+        <!-- <Icon name="arrow-right" class="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" /> -->
+      </span>
+      <span class="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-500 transition-all duration-300 group-hover:opacity-90"></span>
+    </Button>
+  </div>
+</section>

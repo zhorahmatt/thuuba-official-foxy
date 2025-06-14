@@ -1,8 +1,8 @@
 ---
 import { configData } from '../../../config/config'
-// Home page CTA Section
+// Home page CTA Section - AI-Enhanced Version
 // ------------
-// Description: A centered call to action section that contains: a title, text, a user review snippet, a button and a image.
+// Description: A modern, AI-styled hero section with animated elements, gradients, and interactive components
 
 // Components
 // - Layout
@@ -14,6 +14,7 @@ import ChipNotification from '../../ui/ChipNotification.astro'
 import { Image } from 'astro:assets'
 import Button from '../../ui/Button.astro'
 import AvatarGroup from '../../ui/AvatarGroup.astro'
+import { Icon } from 'astro-icon/components'
 
 // Content
 // - Hero Image
@@ -29,33 +30,65 @@ const avatars = [
 ]
 ---
 
-<Section id="intro" padding="top" classes="bg-neutral-50 dark:bg-neutral-900">
-	<Row>
-		<Col span="2" />
-		<Col span="8" align="center">
-			<!-- <ChipNotification radius="rounded-full" classes="mb-6">
-				<strong>30K+</strong> satisfied customers
-				<AvatarGroup avatars={avatars} radius="rounded-full" slot="button" />
-			</ChipNotification> -->
-			<!-- <h1>Enhance team <strong>performance</strong> with seamless integration</h1> -->
-			<h1>
-				<strong>Empowering Businesses</strong>
-				Through Innovative Digital Solutions
+<Section id="intro" padding="top" classes="relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-primary-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-primary-950">
+	
+
+	<Row classes="relative z-10">
+		<Col span="12" align="center" classes="mb-8">
+			<!-- AI Badge -->
+			<div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6 backdrop-blur-sm border border-primary-200 dark:border-primary-800 animate-bounce">
+				<span class="flex h-2 w-2 relative mr-2">
+					<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+					<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+				</span>
+				AI-Powered Digital Solutions
+			</div>
+			
+			<!-- Heading with Gradient Animation -->
+			<h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+				<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600 animate-pulse">Empowering Businesses</span>
+				<br />
+				Through <span class="relative inline-block">
+					<span class="absolute inset-0 bg-primary-200 dark:bg-primary-800 opacity-20 blur-xl animate-pulse"></span>
+					<span class="relative">Innovative AI</span>
+				</span> Solutions
 			</h1>
 
-			<p class="pb-0 text-lg">Work smarter, Not harder, with our innovative platform</p>
-			<Button size="lg" link={configData.consultationLink}>Book a Consultation Today!</Button>
+			<p class="pb-0 text-xl max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-300">Transform your business with cutting-edge technology that adapts, learns, and evolves to meet your unique challenges</p>
+			
+			<!-- CTA Buttons -->
+			<div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+				<Button size="lg" link={configData.consultationLink} classes="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+					<div class="flex items-center gap-2">
+						<Icon name="rocket" class="w-5 h-5" />
+						Book a Consultation
+					</div>
+				</Button>
+				<Button size="lg" style="secondary" link="/services" classes="backdrop-blur-sm bg-white/30 dark:bg-neutral-800/30 border border-neutral-200 dark:border-neutral-700 hover:bg-white/50 dark:hover:bg-neutral-800/50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+					<div class="flex items-center gap-2">
+						<Icon name="light-bulb" class="w-5 h-5" />
+						Explore Solutions
+					</div>
+				</Button>
+			</div>
+			
+			<!-- Social Proof -->
+			<div class="flex items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-400">
+				<AvatarGroup avatars={avatars} radius="rounded-full" />
+				<span>Trusted by <strong>500+</strong> businesses worldwide</span>
+			</div>
 		</Col>
-		<Col span="2" />
-		<Col span="2" />
-		<Col span="8">
-			<Image
-				src={heroImage}
-				alt="Thuuba Digital"
-				class="md:translate-y-12 translate-y-4  dark:shadow-neutral-950"
-				format="webp"
-			/>
-		</Col>
-		<Col span="2" />
 	</Row>
 </Section>
+
+<style>
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+</style>

@@ -12,6 +12,27 @@ import Row from '../../ui/Row.astro'
 import Col from '../../ui/Col.astro'
 // - UI
 import Card from '../../ui/cards/BasicCard.astro'
+import Button from '../../ui/Button.astro'
+import { Icon } from 'astro-icon/components'
+
+// Philosophy Values
+const philosophyValues = [
+	{
+		title: 'Bridge to Success',
+		icon: 'rocket',
+		description: 'We serve as the bridge connecting your vision with optimal technological implementation.'
+	},
+	{
+		title: 'Sustainable Collaboration',
+		icon: 'user-group',
+		description: 'We build mutually beneficial relationships, creating an ecosystem where all parties grow together.'
+	},
+	{
+		title: 'Value Balance',
+		icon: 'scale',
+		description: 'Beyond economic benefits, we prioritize positive impacts on people and the environment.'
+	}
+]
 
 // 	Props
 type Props = {
@@ -22,14 +43,6 @@ const { classes } = Astro.props
 
 <Section id="requests" classes={classes}>
 	<Row>
-		<!-- <Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
-			<h2 class="text-balance">Have a Special Request? We’re Here to <strong>Help!</strong></h2>
-			<p class="pb-0 text-lg">
-				Choose from one of the options below to get the specific help you need. Whether it's
-				customer support, sales inquiries, feature requests, or general feedback, we're here to
-				provide you with the best assistance possible.
-			</p>
-		</Col> -->
 		<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
 			<h2 class="text-pretty">
 				Shaping a future where technology drives <strong>success</strong> and <strong>innovation</strong>
@@ -40,41 +53,37 @@ const { classes } = Astro.props
 				and tailored digital solutions that empower our clients to excel in an ever-evolving digital landscape.
 			</p>
 		</Col>
-	</Row>
-	<Row>
-		<Col span="3">
-			<Card
-				title="Client-Centric Approach"
-				subtitle="We prioritize your goals, delivering solutions that align with your vision and business objectives."
-				icon="rocket"
-				classes="text-center dark:!bg-neutral-800/50"
-			/>
-		</Col>
-		<Col span="3">
-			<Card
-				title="Innovation-Driven"
-				subtitle="Staying ahead of the curve is our mantra, ensuring our clients benefit from the latest technological advancements."
-				icon="document-text"
-				classes="text-center dark:!bg-neutral-800/50"
-			/>
-		</Col>
-		<Col span="3">
-			<Card
-				title="Expert Team"
-				subtitle="Our team consists of passionate software engineers and digital creators who bring a wealth of experience and creativity to every project."
-				icon="bolt"
-				classes="text-center dark:!bg-neutral-800/50"
-				link="/contact"
-			/>
-		</Col>
-		<Col span="3" classes="flex flex-col gap-6">
-			<Card
-				title="General Feedback"
-				subtitle="Your feedback is invaluable to us. Let us know how we’re doing and how we can improve. "
-				icon="chat-bubble-left-ellipsis"
-				classes="text-center dark:!bg-neutral-800/50"
-				link="/contact"
-			/>
+
+		{philosophyValues.map((value) => (
+			<Col span="4">
+				<div class="group h-full transform transition-all duration-500 hover:translate-y-[-8px]">
+					<div class="h-full p-6 rounded-xl bg-white/70 dark:bg-neutral-800/50 backdrop-blur-md border border-white/20 dark:border-neutral-700/30 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+						<div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-transparent dark:from-primary-900/20 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+						
+						<div class="relative z-10">
+							<div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+								<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-700 dark:to-primary-900 flex items-center justify-center shadow-lg shadow-primary-300/30 dark:shadow-primary-900/30">
+									<Icon name={value.icon} class="w-6 h-6 text-white" />
+								</div>
+							</div>
+							
+							<h3 class="text-xl font-bold mb-2 text-neutral-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+								{value.title}
+							</h3>
+							<div class="h-0.5 w-8 bg-primary-500 mb-3 transition-all duration-500 group-hover:w-full"></div>
+							<p class="text-neutral-600 dark:text-neutral-300">{value.description}</p>
+						</div>
+						
+						<div class="absolute bottom-0 right-0 w-16 h-16 bg-primary-500/10 dark:bg-primary-500/5 rounded-tl-full transform translate-y-1/2 translate-x-1/2"></div>
+					</div>
+				</div>
+			</Col>
+		))}
+
+		<Col span="12" align="center" classes="mt-8">
+			<Button type="link" link="/philosophy" size="lg" style="primary">
+				Explore Our Philosophy
+			</Button>
 		</Col>
 	</Row>
 </Section>
