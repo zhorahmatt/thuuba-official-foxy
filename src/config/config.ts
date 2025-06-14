@@ -24,7 +24,7 @@ export const configData = {
 	siteTitle: 'Thuuba Digital | AI-Powered Digital Transformation Consultant',
 	siteDescription:
 		'Thuuba Digital is an AI-powered software consultancy revolutionizing business growth through cutting-edge technology solutions and intelligent automation',
-	ogImage: '/og.jpg',
+	ogImage: '/logo.jpg',
 	logo: {
 		src: '/logo.svg',
 		alt: 'Thuuba. logo'
