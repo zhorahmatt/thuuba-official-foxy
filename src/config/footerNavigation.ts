@@ -10,6 +10,7 @@ export interface Logo {
 export interface FooterAbout {
 	title: string
 	aboutText: string
+	jargon: string
 	logo: Logo
 }
 
@@ -36,8 +37,8 @@ export interface FooterData {
 export const footerNavigationData: FooterData = {
 	footerAbout: {
 		title: 'Thuuba Digital',
-		aboutText:
-			'Innovate. Transform. Empower.',
+		aboutText: 'PT. Thuuba Digital Indonesia',
+		jargon: 'Innovate. Transform. Empower.',
 		logo: {
 			src: '/logo.svg',
 			alt: 'Thuuba Digital',
@@ -77,10 +78,10 @@ export const footerNavigationData: FooterData = {
 		{
 			category: 'Links',
 			subCategories: [
-				{
-					subCategory: 'About us',
-					subCategoryLink: '/'
-				},
+				// {
+				// 	subCategory: 'About us',
+				// 	subCategoryLink: '/'
+				// },
 				// {
 				// 	subCategory: 'News',
 				// 	subCategoryLink: '/blog'
