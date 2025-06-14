@@ -39,20 +39,9 @@ export const navigationBarData: NavData = {
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
-		{ name: 'Solution', link: '/solution' },
-		// { name: 'FAQ', link: '/faq' },
+		{ name: 'Philosophy', link: '/philosophy' },
+		{ name: 'Services', link: '/services' },
 		{ name: 'Works', link: '/works' },
-		// {
-		// 	name: 'Resources',
-		// 	link: '#',
-		// 	submenu: [
-		// 		{ name: 'Blog', link: '/blog' },
-		// 		{ name: 'Changelog', link: '/changelog' },
-		// 		{ name: 'FAQ', link: '/faq' },
-		// 		{ name: 'Terms', link: '/terms' }
-		// 	]
-		// },
-		// { name: 'Contact', link: '/contact' }
 	],
-	navActions: [{ name: 'Contact Us', link: 'https://wa.me/6281928828180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi', style: 'primary', size: 'lg' }]
+	navActions: [{ name: "Let's Collaborate", link: "https://wa.me/6282199448180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi", style: 'primary', size: 'lg' }]
 }

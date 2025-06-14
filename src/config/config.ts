@@ -20,7 +20,7 @@ export interface Config {
 	scrollAnimations: boolean
 }
 
-export const configData: Config = {
+export const configData = {
 	siteTitle: 'Thuuba. Your Digital Transformation Partner',
 	siteDescription:
 		'Thuuba is software agency that help your business grow faster than before through technology',
@@ -32,5 +32,6 @@ export const configData: Config = {
 	canonical: true,
 	noindex: false,
 	mode: 'auto',
-	scrollAnimations: true
+	scrollAnimations: true,
+	consultationLink: "https://wa.me/6282199448180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi",
 }

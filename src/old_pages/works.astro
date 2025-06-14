@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+const projects = [
+  {
+    title: "Personal Website",
+    description: "A modern personal website built with Astro and Tailwind CSS.",
+    image: "/blog/post-01-cover.png"
+  },
+  {
+    title: "E-commerce Platform",
+    description: "A scalable e-commerce platform with shopping cart and payment integration.",
+    image: "/blog/post-02-cover.png"
+  },
+  {
+    title: "Blog System",
+    description: "A markdown-based blog system with content management features.",
+    image: "/blog/post-03-cover.png"
+  },
+  {
+    title: "Portfolio Gallery",
+    description: "A gallery to showcase design and development projects.",
+    image: "/blog/post-04-cover.png"
+  }
+];
+---
+
+<Layout>
+  <main class="flex flex-col items-center px-4 py-12">
+    <h1 class="text-3xl font-bold mb-10 text-center">Featured Works</h1>
+    <div class="w-full max-w-8xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        {projects.map(project => (
+          <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col w-full max-w-sm">
+            <img src={project.image} alt={project.title} class="h-48 w-full object-cover" />
+            <div class="p-6 flex-1 flex flex-col">
+              <h2 class="text-xl font-semibold mb-2">{project.title}</h2>
+              <p class="text-gray-600 flex-1">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

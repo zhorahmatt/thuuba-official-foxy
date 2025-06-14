@@ -1,0 +1,222 @@
+---
+import Layout from '../layouts/Layout.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+
+const SEO = {
+  title: 'AI-Powered Digital Transformation Services | Thuuba Agency',
+  description: 'Transform your business with Thuuba\'s comprehensive suite of AI-driven digital solutions - from strategic consulting and custom software development to creative design and technology implementation.'
+}
+
+const services = [
+  {
+    title: 'Digital Transformation Strategy',
+    desc: 'Revolutionize your business operations with our data-driven digital transformation roadmaps. We analyze your current processes, identify optimization opportunities, and implement AI-powered solutions that deliver measurable ROI and sustainable competitive advantages.',
+    icon: '/src/icons/rocket.svg',
+    step: 1
+  },
+  {
+    title: 'Seamless Technology Solutions',
+    desc: 'Elevate your digital presence with our cutting-edge development services. From responsive web applications and intuitive mobile experiences to scalable e-commerce platforms - all enhanced by AI technologies that adapt to user behavior and business needs.',
+    icon: '/src/icons/device-phone-mobile.svg',
+    step: 2
+  },
+  {
+    title: 'Tech Consulting & Strategy',
+    desc: 'Navigate the complex technology landscape with confidence through our expert consulting services. Our seasoned advisors provide actionable insights, technology stack recommendations, and implementation strategies tailored to your specific industry challenges and growth objectives.',
+    icon: '/src/icons/light-bulb.svg',
+    step: 3
+  },
+  {
+    title: 'Creative Storytelling & Digital Experiences',
+    desc: 'Captivate your audience with immersive digital experiences that communicate your brand\'s unique story. Our creative team combines stunning UI/UX design, interactive elements, and strategic content to create memorable digital journeys that drive engagement and conversion.',
+    icon: '/src/icons/paint-brush.svg',
+    step: 4
+  }
+]
+
+const whyChoose = [
+  {
+    icon: '/src/icons/bolt.svg',
+    title: 'AI-Powered Innovation',
+    desc: 'We leverage the latest AI technologies to deliver smarter, faster results.'
+  },
+  {
+    icon: '/src/icons/shield-check.svg',
+    title: 'Trusted Expertise',
+    desc: 'Our team is recognized for excellence and trusted by leading brands.'
+  },
+  {
+    icon: '/src/icons/user-group.svg',
+    title: 'Dedicated Support',
+    desc: 'We provide responsive, friendly support at every stage of your project.'
+  },
+  {
+    icon: '/src/icons/rocket.svg',
+    title: 'Proven Results',
+    desc: 'Our work drives real business growth and digital transformation.'
+  }
+]
+---
+<Layout title={SEO.title} description={SEO.description}>
+  <!-- Hero Section with Animated Background -->
+  <section class="relative py-24 px-4 md:px-8 overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-primary-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-primary-950 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10 dark:opacity-20">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary-300 dark:bg-primary-700 blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/3 right-1/3 w-96 h-96 rounded-full bg-primary-200 dark:bg-primary-800 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-2/3 left-1/2 w-48 h-48 rounded-full bg-primary-400 dark:bg-primary-600 blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+      </div>
+      <!-- Grid Pattern Overlay -->
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iLjAyIiBkPSJNMzAgMGMxNi41NjkgMCAzMCAxMy40MzEgMzAgMzAgMCAxNi41NjktMTMuNDMxIDMwLTMwIDMwQzEzLjQzMSA2MCAwIDQ2LjU2OSAwIDMwIDAgMTMuNDMxIDEzLjQzMSAwIDMwIDB6Ii8+PC9nPjwvc3ZnPg==')]" style="background-size: 30px 30px;"></div>
+    </div>
+    
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <!-- Animated Badge -->
+      <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6 backdrop-blur-sm border border-primary-200 dark:border-primary-800 animate-bounce">
+        <span class="flex h-2 w-2 relative mr-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+        </span>
+        AI-Powered Digital Solutions
+      </div>
+      
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600 animate-pulse">Our Services</span>
+      </h1>
+      <p class="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto mb-12 leading-relaxed">
+        Transform your business with Thuuba's suite of AI-driven digital solutions, designed for innovation, growth, and lasting impact.
+      </p>
+      
+      <!-- Scroll Indicator -->
+      <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+        <span class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">Explore Our Services</span>
+        <div class="w-6 h-10 border-2 border-primary-500 rounded-full flex justify-center p-1">
+          <div class="w-1.5 h-1.5 bg-primary-500 rounded-full animate-bounce mt-1"></div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Services Section with 3D Cards -->
+  <section class="py-20 px-4 md:px-8 bg-white dark:bg-neutral-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+        {services.map((service, idx) => (
+          <div class="group relative">
+            <!-- 3D Card with Hover Effects -->
+            <div class="relative bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 rounded-2xl p-8 transition-all duration-500 shadow-lg hover:shadow-2xl border border-neutral-100 dark:border-neutral-700 overflow-hidden transform perspective-1000 hover:rotate-x-1 hover:rotate-y-1 hover:scale-105">
+              <!-- Glowing Border Effect -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary-400 to-primary-600 opacity-0 group-hover:opacity-20 dark:group-hover:opacity-30 transition-opacity duration-500"></div>
+              
+              <!-- Floating Icon with Glow -->
+              <div class="relative z-10 mb-8">
+                <div class="absolute -inset-4 bg-primary-500 rounded-full opacity-20 blur-lg group-hover:opacity-30 group-hover:blur-xl transition-all duration-500"></div>
+                <div class="relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-primary-500 to-primary-400 shadow-lg border-2 border-white dark:border-neutral-800 group-hover:shadow-primary-500/30 dark:group-hover:shadow-primary-400/20 transition-all duration-500 group-hover:scale-110">
+                  <img src={service.icon} alt={service.title} class="w-10 h-10 text-white" />
+                </div>
+              </div>
+              
+              <!-- Service Number Badge -->
+              <div class="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-neutral-100 dark:bg-neutral-800 text-primary-600 dark:text-primary-400 font-bold text-sm border border-neutral-200 dark:border-neutral-700">
+                {service.step}
+              </div>
+              
+              <!-- Content with Animated Underline -->
+              <div>
+                <h3 class="text-2xl font-bold mb-4 text-neutral-800 dark:text-white transition-colors duration-300">
+                  {service.title}
+                  <div class="h-1 w-0 group-hover:w-full bg-primary-500 mt-2 transition-all duration-500 rounded-full"></div>
+                </h3>
+                <p class="text-neutral-600 dark:text-neutral-300 mb-6 leading-relaxed">{service.desc}</p>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section with Glassmorphism Cards -->
+  <section class="py-24 px-4 md:px-8 relative overflow-hidden">
+    <!-- Background with Gradient Mesh -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-neutral-50 dark:from-primary-950 dark:via-neutral-900 dark:to-neutral-950 overflow-hidden">
+      <div class="absolute inset-0 opacity-30 dark:opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-300 via-transparent to-transparent dark:from-primary-600"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-neutral-800 dark:text-white">
+          Why Choose <span class="text-primary-600 dark:text-primary-400">Thuuba</span>?
+        </h2>
+        <p class="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+          Discover what sets us apart as your digital transformation partner
+        </p>
+      </div>
+      
+      <!-- Glassmorphism Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {whyChoose.map((item, idx) => (
+          <div class="group relative transform transition-all duration-500 hover:scale-105">
+            <!-- Glassmorphism Card -->
+            <div class="h-full backdrop-blur-md bg-white/70 dark:bg-neutral-800/50 rounded-2xl p-8 border border-white/20 dark:border-neutral-700/30 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+              <!-- Animated Background Gradient -->
+              <div class="absolute inset-0 bg-gradient-to-br from-primary-100/50 via-transparent to-transparent dark:from-primary-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Animated Icon Container -->
+              <div class="relative z-10 mb-6 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary-500 to-primary-400 shadow-lg shadow-primary-500/20 dark:shadow-primary-500/10">
+                  <img src={item.icon} alt={item.title} class="w-8 h-8 text-white" />
+                </div>
+              </div>
+              
+              <!-- Content with Animated Line -->
+              <div class="relative z-10">
+                <h3 class="text-xl font-bold mb-3 text-neutral-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  {item.title}
+                </h3>
+                <div class="h-0.5 w-12 bg-primary-500 mb-4 transition-all duration-500 group-hover:w-full"></div>
+                <p class="text-neutral-600 dark:text-neutral-300">{item.desc}</p>
+              </div>
+              
+              <!-- Decorative Elements -->
+              <div class="absolute bottom-0 right-0 w-24 h-24 bg-primary-500/10 dark:bg-primary-500/5 rounded-tl-full transform translate-y-1/2 translate-x-1/2"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats Section with Animated Counters -->
+  <section class="py-16 px-4 md:px-8 bg-white dark:bg-neutral-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-2">98%</div>
+          <p class="text-neutral-600 dark:text-neutral-400">Client Satisfaction</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-2">50+</div>
+          <p class="text-neutral-600 dark:text-neutral-400">Projects Completed</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-2">10+</div>
+          <p class="text-neutral-600 dark:text-neutral-400">Years Experience</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-2">24/7</div>
+          <p class="text-neutral-600 dark:text-neutral-400">Support Available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section with Enhanced Design -->
+  <div class="py-10 px-4 md:px-8 bg-gradient-to-br from-primary-50 via-white to-neutral-50 dark:from-primary-950 dark:via-neutral-900 dark:to-neutral-950">
+    <div class="max-w-6xl mx-auto">
+      <CTA />
+    </div>
+  </div>
+</Layout>

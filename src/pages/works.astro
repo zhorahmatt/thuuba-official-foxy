@@ -1,44 +1,259 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+
+// Example project data (replace with your real data source)
 const projects = [
   {
-    title: "Personal Website",
-    description: "A modern personal website built with Astro and Tailwind CSS.",
-    image: "/blog/post-01-cover.png"
+    title: 'E-Commerce Platform',
+    type: 'Web App',
+    icon: '/src/icons/shopping-cart.svg',
+    description: 'A scalable online store with integrated payments and analytics.',
+    result: 'Increased sales by 40% for client',
+    image: ['/blog/post-01-cover.png', '/blog/post-01.png'], // Multiple images for slider
+    technology: ['React', 'Node.js', 'Stripe', 'TailwindCSS'],
+    link: '/works/ecommerce-platform'
   },
   {
-    title: "E-commerce Platform",
-    description: "A scalable e-commerce platform with shopping cart and payment integration.",
-    image: "/blog/post-02-cover.png"
+    title: 'AI-Powered CRM',
+    type: 'Enterprise Solution',
+    icon: '/src/icons/users.svg',
+    description: 'Custom CRM with AI-driven insights and automated workflows.',
+    result: 'Reduced customer churn by 25%',
+    image: ['/blog/post-02-cover.png', '/blog/post-02.png'],
+    technology: ['Python', 'TensorFlow', 'React', 'AWS'],
+    link: '/works/ai-crm'
   },
   {
-    title: "Blog System",
-    description: "A markdown-based blog system with content management features.",
-    image: "/blog/post-03-cover.png"
+    title: 'Mobile Banking App',
+    type: 'Mobile App',
+    icon: '/src/icons/credit-card.svg',
+    description: 'Secure and intuitive banking application with biometric authentication.',
+    result: 'Over 100,000 downloads in first month',
+    image: ['/blog/post-03-cover.png', '/blog/post-03.png'],
+    technology: ['React Native', 'Node.js', 'MongoDB', 'Firebase'],
+    link: '/works/mobile-banking'
   },
   {
-    title: "Portfolio Gallery",
-    description: "A gallery to showcase design and development projects.",
-    image: "/blog/post-04-cover.png"
+    title: 'Healthcare Management System',
+    type: 'SaaS Platform',
+    icon: '/src/icons/activity.svg',
+    description: 'Comprehensive platform for healthcare providers to manage patient data and operations.',
+    result: 'Improved operational efficiency by 35%',
+    image: ['/blog/post-04-cover.png', '/blog/post-04.png'],
+    technology: ['Vue.js', 'Django', 'PostgreSQL', 'Docker'],
+    link: '/works/healthcare-system'
   }
-];
+]
+
+const SEO = {
+  title: 'Our Work | Thuuba Agency',
+  description: 'Explore our portfolio of successful projects and see how we help businesses transform and grow.'
+}
 ---
 
-<Layout>
-  <main class="flex flex-col items-center px-4 py-12">
-    <h1 class="text-3xl font-bold mb-10 text-center">Featured Works</h1>
-    <div class="w-full max-w-8xl">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {projects.map(project => (
-          <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col w-full max-w-sm">
-            <img src={project.image} alt={project.title} class="h-48 w-full object-cover" />
-            <div class="p-6 flex-1 flex flex-col">
-              <h2 class="text-xl font-semibold mb-2">{project.title}</h2>
-              <p class="text-gray-600 flex-1">{project.description}</p>
+<Layout seo={SEO}>
+  <!-- Hero Section with Animated Background -->
+  <div class="relative overflow-hidden bg-gradient-to-b from-primary-900 to-neutral-900 text-white">
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- Animated Gradient Background -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,40,200,0.3),transparent_40%),radial-gradient(circle_at_70%_60%,rgba(60,100,200,0.2),transparent_50%)]">
+        <!-- Animated Particles -->
+        <div class="absolute inset-0 opacity-30">
+          <div class="absolute h-2 w-2 rounded-full bg-primary-400 animate-pulse" style="top: 20%; left: 30%;"></div>
+          <div class="absolute h-3 w-3 rounded-full bg-primary-500 animate-pulse" style="top: 60%; left: 40%; animation-delay: 1s;"></div>
+          <div class="absolute h-2 w-2 rounded-full bg-primary-400 animate-pulse" style="top: 30%; left: 70%; animation-delay: 0.5s;"></div>
+          <div class="absolute h-4 w-4 rounded-full bg-primary-500 animate-pulse" style="top: 70%; left: 20%; animation-delay: 1.5s;"></div>
+          <div class="absolute h-3 w-3 rounded-full bg-primary-400 animate-pulse" style="top: 40%; left: 80%; animation-delay: 2s;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="mx-auto max-w-7xl text-center">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">Masterpiece Works</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg sm:text-xl">
+          Explore our portfolio of successful projects that showcase our expertise in delivering innovative digital solutions.
+        </p>
+        
+        <!-- Animated Scroll Indicator -->
+        <div class="mt-10 animate-bounce">
+          <svg class="w-8 h-8 mx-auto text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content with Clean Background -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-900">
+    <div class="max-w-7xl mx-auto">
+      <!-- Project Showcase -->
+      <div class="space-y-32">
+        {projects.map((project, idx) => (
+          <div class="relative">
+            <!-- Background Accent -->
+            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary-100/40 to-primary-200/20 dark:from-primary-900/20 dark:to-primary-800/10 blur-xl opacity-70"></div>
+            
+            <div class="relative flex flex-col lg:flex-row gap-8 lg:gap-12 bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-primary-500/50 dark:hover:border-primary-700/50 transition-all duration-500 shadow-lg">
+              <!-- Project Image Area -->
+              <div class="relative w-full lg:w-1/2 overflow-hidden group">
+                <!-- Main Image -->
+                <div class="relative h-80 lg:h-full overflow-hidden">
+                  <img 
+                    src={Array.isArray(project.image) ? project.image[0] : project.image} 
+                    alt={project.title} 
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                  />
+                  
+                  <!-- Overlay Gradient -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-neutral-100/80 via-neutral-100/50 to-transparent dark:from-neutral-900 dark:via-neutral-900/50 dark:to-transparent opacity-60"></div>
+                  
+                  <!-- Interactive Elements -->
+                  <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="p-4 rounded-full bg-primary-600/80 backdrop-blur-sm text-white">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Project Type Badge -->
+                <div class="absolute top-4 left-4 px-4 py-2 rounded-full bg-primary-100/80 dark:bg-primary-900/80 backdrop-blur-sm border border-primary-300/50 dark:border-primary-700/50 text-primary-700 dark:text-primary-400 text-sm font-medium">
+                  {project.type}
+                </div>
+              </div>
+              
+              <!-- Project Info -->
+              <div class="relative flex flex-col p-8 lg:p-10 w-full lg:w-1/2">
+                <!-- Project Icon -->
+                {project.icon && (
+                  <div class="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-300 dark:from-primary-700 dark:to-primary-900 p-3 flex items-center justify-center shadow-lg shadow-primary-300/30 dark:shadow-primary-900/30">
+                    <img src={project.icon} alt="icon" class="w-8 h-8 text-primary-700 dark:text-white" />
+                  </div>
+                )}
+                
+                <!-- Project Title -->
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-neutral-800 dark:text-white">
+                  {project.title}
+                </h2>
+                
+                <!-- Project Description -->
+                <p class="text-neutral-600 dark:text-neutral-300 text-lg mb-6">{project.description}</p>
+                
+                <!-- Project Result -->
+                {project.result && (
+                  <div class="mb-8 flex items-center gap-3 p-4 rounded-xl bg-neutral-100/50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700">
+                    <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-primary-600 dark:text-primary-400 font-medium">{project.result}</span>
+                  </div>
+                )}
+                
+                <!-- Technology Tags -->
+                {project.technology && (
+                  <div class="mb-8">
+                    <h3 class="text-sm uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Technologies Used</h3>
+                    <div class="flex flex-wrap gap-2">
+                      {project.technology.map(tech => (
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-primary-600 dark:text-primary-400 border border-primary-200/50 dark:border-primary-800/50 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors duration-300">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                <!-- Project Link -->
+                <a 
+                  href={project.link} 
+                  class="mt-auto self-start inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-600 dark:to-primary-700 text-white font-medium shadow-lg shadow-primary-300/30 dark:shadow-primary-900/30 hover:shadow-primary-400/50 dark:hover:shadow-primary-800/50 transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  View Case Study
+                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         ))}
       </div>
+      
+      <!-- Stats Section -->
+      <div class="mt-32 mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-neutral-800 dark:text-white">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-400 dark:to-primary-600">Our Impact by Numbers</span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="p-6 rounded-2xl bg-neutral-50/50 dark:bg-neutral-800/50 backdrop-blur-lg border border-neutral-200 dark:border-neutral-700 hover:border-primary-500/50 dark:hover:border-primary-700/50 transition-all duration-300 group">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-700 dark:to-primary-900 flex items-center justify-center shadow-lg shadow-primary-300/20 dark:shadow-primary-900/20 group-hover:shadow-primary-400/40 dark:group-hover:shadow-primary-800/40 transition-all duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-5xl font-bold text-neutral-800 dark:text-white mb-2 text-center">40%</h3>
+            <p class="text-primary-600 dark:text-primary-400 text-center">Average Performance Boost</p>
+          </div>
+          
+          <div class="p-6 rounded-2xl bg-neutral-50/50 dark:bg-neutral-800/50 backdrop-blur-lg border border-neutral-200 dark:border-neutral-700 hover:border-primary-500/50 dark:hover:border-primary-700/50 transition-all duration-300 group">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-700 dark:to-primary-900 flex items-center justify-center shadow-lg shadow-primary-300/20 dark:shadow-primary-900/20 group-hover:shadow-primary-400/40 dark:group-hover:shadow-primary-800/40 transition-all duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-5xl font-bold text-neutral-800 dark:text-white mb-2 text-center">$2.5M</h3>
+            <p class="text-primary-600 dark:text-primary-400 text-center">Client Revenue Generated</p>
+          </div>
+          
+          <div class="p-6 rounded-2xl bg-neutral-50/50 dark:bg-neutral-800/50 backdrop-blur-lg border border-neutral-200 dark:border-neutral-700 hover:border-primary-500/50 dark:hover:border-primary-700/50 transition-all duration-300 group">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-700 dark:to-primary-900 flex items-center justify-center shadow-lg shadow-primary-300/20 dark:shadow-primary-900/20 group-hover:shadow-primary-400/40 dark:group-hover:shadow-primary-800/40 transition-all duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-5xl font-bold text-neutral-800 dark:text-white mb-2 text-center">50+</h3>
+            <p class="text-primary-600 dark:text-primary-400 text-center">Satisfied Clients</p>
+          </div>
+          
+          <div class="p-6 rounded-2xl bg-neutral-50/50 dark:bg-neutral-800/50 backdrop-blur-lg border border-neutral-200 dark:border-neutral-700 hover:border-primary-500/50 dark:hover:border-primary-700/50 transition-all duration-300 group">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-700 dark:to-primary-900 flex items-center justify-center shadow-lg shadow-primary-300/20 dark:shadow-primary-900/20 group-hover:shadow-primary-400/40 dark:group-hover:shadow-primary-800/40 transition-all duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="text-5xl font-bold text-neutral-800 dark:text-white mb-2 text-center">100%</h3>
+            <p class="text-primary-600 dark:text-primary-400 text-center">Security Compliance</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
+  
+  <!-- Animated CTA Section -->
+  <div class="relative overflow-hidden py-16 bg-neutral-50 dark:bg-black">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-100/20 via-transparent to-primary-100/20 dark:from-primary-900/20 dark:via-transparent dark:to-primary-900/20"></div>
+    </div>
+    
+    <div class="relative z-10 flex justify-center">
+      <CTA />
+    </div>
+  </div>
+  
+  <!-- Add Client-side Script for Animations -->
+  <script>
+    // You can add intersection observer code here to trigger animations when elements come into view
+    document.addEventListener('DOMContentLoaded', () => {
+      // Animation code would go here
+    });
+  </script>
 </Layout>

@@ -17,6 +17,7 @@ import Highlight from '../../ui/Highlight.astro'
 
 // Content
 import ctaImage from '../../../assets/cta-dark-bg.webp'
+import { configData } from '../../../config/config'
 import badge from '../../../assets/badge.svg'
 ---
 
@@ -35,7 +36,7 @@ import badge from '../../../assets/badge.svg'
 					#1 Product of the Year, <Highlight classes="ml-2">Product Hunt</Highlight>
 				</ChipNotification> -->
 				<!-- <Button size="lg" style="primary"> Book a Consultation Today! </Button> -->
-				<Button size="lg" link="https://wa.me/6281928828180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi">Book a Consultation Today!</Button>
+				<Button size="lg" link={configData.consultationLink}>Book a Consultation Today!</Button>
 			</CTA>
 			<Col span="1" />
 		</Col>

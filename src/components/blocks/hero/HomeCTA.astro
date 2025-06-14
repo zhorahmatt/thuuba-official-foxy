@@ -1,4 +1,5 @@
 ---
+import { configData } from '../../../config/config'
 // Home page CTA Section
 // ------------
 // Description: A centered call to action section that contains: a title, text, a user review snippet, a button and a image.
@@ -43,7 +44,7 @@ const avatars = [
 			</h1>
 
 			<p class="pb-0 text-lg">Work smarter, Not harder, with our innovative platform</p>
-			<Button size="lg" link="https://wa.me/6281928828180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi">Book a Consultation Today!</Button>
+			<Button size="lg" link={configData.consultationLink}>Book a Consultation Today!</Button>
 		</Col>
 		<Col span="2" />
 		<Col span="2" />
