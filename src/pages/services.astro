@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
+import { Icon } from 'astro-icon/components'
 
 const SEO = {
   title: 'AI-Powered Digital Transformation Services | Thuuba Agency',
@@ -11,47 +12,47 @@ const services = [
   {
     title: 'Digital Transformation Strategy',
     desc: 'Revolutionize your business operations with our data-driven digital transformation roadmaps. We analyze your current processes, identify optimization opportunities, and implement AI-powered solutions that deliver measurable ROI and sustainable competitive advantages.',
-    icon: '/src/icons/rocket.svg',
+    icon: 'rocket',
     step: 1
   },
   {
     title: 'Seamless Technology Solutions',
     desc: 'Elevate your digital presence with our cutting-edge development services. From responsive web applications and intuitive mobile experiences to scalable e-commerce platforms - all enhanced by AI technologies that adapt to user behavior and business needs.',
-    icon: '/src/icons/device-phone-mobile.svg',
+    icon: 'device-phone-mobile',
     step: 2
   },
   {
     title: 'Tech Consulting & Strategy',
     desc: 'Navigate the complex technology landscape with confidence through our expert consulting services. Our seasoned advisors provide actionable insights, technology stack recommendations, and implementation strategies tailored to your specific industry challenges and growth objectives.',
-    icon: '/src/icons/light-bulb.svg',
+    icon: 'light-bulb',
     step: 3
   },
   {
     title: 'Creative Storytelling & Digital Experiences',
     desc: 'Captivate your audience with immersive digital experiences that communicate your brand\'s unique story. Our creative team combines stunning UI/UX design, interactive elements, and strategic content to create memorable digital journeys that drive engagement and conversion.',
-    icon: '/src/icons/paint-brush.svg',
+    icon: 'paint-brush',
     step: 4
   }
 ]
 
 const whyChoose = [
   {
-    icon: '/src/icons/bolt.svg',
+    icon: 'bolt',
     title: 'AI-Powered Innovation',
     desc: 'We leverage the latest AI technologies to deliver smarter, faster results.'
   },
   {
-    icon: '/src/icons/shield-check.svg',
+    icon: 'shield-check',
     title: 'Trusted Expertise',
     desc: 'Our team is recognized for excellence and trusted by leading brands.'
   },
   {
-    icon: '/src/icons/user-group.svg',
+    icon: 'user-group',
     title: 'Dedicated Support',
     desc: 'We provide responsive, friendly support at every stage of your project.'
   },
   {
-    icon: '/src/icons/rocket.svg',
+    icon: 'rocket',
     title: 'Proven Results',
     desc: 'Our work drives real business growth and digital transformation.'
   }
@@ -113,7 +114,7 @@ const whyChoose = [
               <div class="relative z-10 mb-8">
                 <div class="absolute -inset-4 bg-primary-500 rounded-full opacity-20 blur-lg group-hover:opacity-30 group-hover:blur-xl transition-all duration-500"></div>
                 <div class="relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-primary-500 to-primary-400 shadow-lg border-2 border-white dark:border-neutral-800 group-hover:shadow-primary-500/30 dark:group-hover:shadow-primary-400/20 transition-all duration-500 group-hover:scale-110">
-                  <img src={service.icon} alt={service.title} class="w-10 h-10 text-white" />
+                  <Icon name={service.icon} class="w-10 h-10 text-white" />
                 </div>
               </div>
               
@@ -167,7 +168,7 @@ const whyChoose = [
               <!-- Animated Icon Container -->
               <div class="relative z-10 mb-6 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary-500 to-primary-400 shadow-lg shadow-primary-500/20 dark:shadow-primary-500/10">
-                  <img src={item.icon} alt={item.title} class="w-8 h-8 text-white" />
+                  <Icon name={item.icon} class="w-8 h-8 text-white" />
                 </div>
               </div>
               
