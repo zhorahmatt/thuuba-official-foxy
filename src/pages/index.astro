@@ -10,7 +10,9 @@ import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astr
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 import FAQ from '../components/blocks/FAQ/FaqSticky.astro'
 import ContactCards from '../components/blocks/contact/ContactCards.astro'
+import BasicContactCards from '../components/blocks/contact/BasicContactCards.astro'
 import SocialProof from '../components/blocks/socialproof/Basic.astro'
+import WorksGallery from '../components/blocks/gallery/WorksGallery.astro'
 // Data
 import faqData from '../data/json-files/faqData.json'
 // - FAQ Categories
@@ -32,16 +34,19 @@ const SEO = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-<Hero />
-	<!-- <Features /> -->
+	<Hero />
 	<ContactCards classes="dark:bg-neutral-950/80" />
+	<!-- <Features /> -->
 	<!-- <SocialProof classes="dark:bg-neutral-950/80" /> -->
-	<Testimonial  bgPosition="right" />
+	<Testimonial  bgPosition="right" padding="top" />
+	<!-- <ContactCards classes="dark:bg-neutral-950/80" /> -->
+	<!-- <BasicContactCards /> -->
 	<HighlightBlocks />
-	<!-- <FAQ
+	<WorksGallery />
+	<FAQ
 		title="Understanding Our Pricing Plans"
 		text="Get all the details on Foxi’s pricing plans. Learn about the costs, discounts, and subscription options to find the best plan that fits your needs and budget."
 		data={faqPricing}
-	/> -->
+	/>
 	<CTA />
 </Layout>

@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+const services = [
+  {
+    title: "Web Development",
+    description: "Custom website and web app development with modern technologies.",
+    image: "/blog/post-01-cover.png"
+  },
+  {
+    title: "E-commerce Solutions",
+    description: "End-to-end e-commerce platforms with payment integration.",
+    image: "/blog/post-02-cover.png"
+  },
+  {
+    title: "Content Management",
+    description: "Flexible CMS solutions for blogs, portfolios, and businesses.",
+    image: "/blog/post-03-cover.png"
+  },
+  {
+    title: "UI/UX Design",
+    description: "User-centered design for web and mobile interfaces.",
+    image: "/blog/post-04-cover.png"
+  }
+];
+---
+
+<Layout>
+  <main class="flex flex-col items-center px-4 py-12 bg-gray-50">
+    <h1 class="text-3xl md:text-4xl font-bold mb-10 text-center">Layanan Kami</h1>
+    <div class="w-full max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map(service => (
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-transform hover:scale-105">
+            <img src={service.image} alt={service.title} class="h-28 w-28 object-cover rounded-full mb-4 border-4 border-gray-100 shadow" />
+            <h2 class="text-lg font-semibold mb-2 text-center">{service.title}</h2>
+            <p class="text-gray-600 text-center">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

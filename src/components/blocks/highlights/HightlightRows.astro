@@ -66,18 +66,25 @@ const highlightBlocks: HighlightBlock[] = [
 ]
 ---
 
+<section class="mt-16 md:mt-16 mb-8">
+  <h2 class="h2 text-center">Our Solutions</h2>
+  <p class="basic-text text-center max-w-2xl mx-auto mb-8">
+    We provide a comprehensive suite of digital solutions designed to help your business grow, innovate, and stay ahead in a rapidly changing world. Explore our core services below:
+  </p>
+</section>
+
 {
-	highlightBlocks.map((highlight, key) => (
-		<TextImage
-			id={`highlight-${key}`}
-			title={highlight.title}
-			text={highlight.text}
-			image={highlight.image}
-			imageWidth={highlight.imageWidth}
-			imageHeight={highlight.imageHeight}
-			mobileImage={highlight.mobileImage}
-			imagePosition={highlight.imagePosition}
-			classes={key === 0 ? '!pb-0' : key === highlightBlocks.length - 1 ? '!pt-0' : '!py-0'}
-		/>
-	))
+  highlightBlocks.map((highlight, key) => (
+    <TextImage
+      id={`highlight-${key}`}
+      title={highlight.title}
+      text={highlight.text}
+      image={highlight.image}
+      imageWidth={highlight.imageWidth}
+      imageHeight={highlight.imageHeight}
+      mobileImage={highlight.mobileImage}
+      imagePosition={highlight.imagePosition}
+      classes={key === 0 ? '!pb-0' : key === highlightBlocks.length - 1 ? '!pt-0' : '!py-0'}
+    />
+  ))
 }
