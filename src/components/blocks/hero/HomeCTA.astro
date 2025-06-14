@@ -19,15 +19,6 @@ import { Icon } from 'astro-icon/components'
 // Content
 // - Hero Image
 import heroImage from '../../../assets/hero.png'
-// - Avatars
-import user1 from '../../../assets/avatars/avatar-01.webp'
-import user2 from '../../../assets/avatars/avatar-02.webp'
-import user3 from '../../../assets/avatars/avatar-03.webp'
-const avatars = [
-	{ image: { src: user1.src, alt: 'user name' }, link: '/' },
-	{ image: { src: user2.src, alt: 'user name' }, link: '/' },
-	{ image: { src: user3.src, alt: 'user name' }, link: '/' }
-]
 ---
 
 <Section id="intro" padding="top" classes="relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-primary-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-primary-950">
@@ -74,8 +65,7 @@ const avatars = [
 			
 			<!-- Social Proof -->
 			<div class="flex items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-400">
-				<AvatarGroup avatars={avatars} radius="rounded-full" />
-				<span>Trusted by <strong>500+</strong> businesses worldwide</span>
+				<span>Trusted by <strong>50+</strong> businesses</span>
 			</div>
 		</Col>
 	</Row>

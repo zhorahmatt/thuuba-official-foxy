@@ -43,5 +43,5 @@ export const navigationBarData: NavData = {
 		{ name: 'Services', link: '/services' },
 		{ name: 'Works', link: '/works' },
 	],
-	navActions: [{ name: "Let's Collaborate", link: "https://wa.me/6282199448180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi", style: 'primary', size: 'lg' }]
+	navActions: [{ name: "Let's Collaborate", link: "https://wa.me/6282199448180?text=Hello%20Thuuba Digital,%20I%20Want to%20Book a Consulation", style: 'primary', size: 'lg' }]
 }

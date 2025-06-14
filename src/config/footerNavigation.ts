@@ -46,11 +46,15 @@ export const footerNavigationData: FooterData = {
 	},
 	footerColumns: [
 		{
-			category: 'Product',
+			category: 'About Us',
 			subCategories: [
 				{
-					subCategory: 'Solution',
-					subCategoryLink: '/solution'
+					subCategory: 'Philosophy',
+					subCategoryLink: '/philosophy'
+				},
+				{
+					subCategory: 'Services',
+					subCategoryLink: '/services'
 				},
 				{
 					subCategory: 'Works',
@@ -71,7 +75,7 @@ export const footerNavigationData: FooterData = {
 			]
 		},
 		{
-			category: 'About us',
+			category: 'Links',
 			subCategories: [
 				{
 					subCategory: 'About us',
@@ -91,7 +95,7 @@ export const footerNavigationData: FooterData = {
 			category: 'Get in touch',
 			subCategories: [
 				{
-					subCategory: 'hi.thuuba@gmail.com',
+					subCategory: 'hi@thuuba.com',
 					subCategoryLink: '/'
 				},
 				// {

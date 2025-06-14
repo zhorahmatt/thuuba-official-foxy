@@ -21,9 +21,9 @@ export interface Config {
 }
 
 export const configData = {
-	siteTitle: 'Thuuba. Your Digital Transformation Partner',
+	siteTitle: 'Thuuba Digital | AI-Powered Digital Transformation Consultant',
 	siteDescription:
-		'Thuuba is software agency that help your business grow faster than before through technology',
+		'Thuuba Digital is an AI-powered software consultancy revolutionizing business growth through cutting-edge technology solutions and intelligent automation',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
@@ -33,5 +33,5 @@ export const configData = {
 	noindex: false,
 	mode: 'auto',
 	scrollAnimations: true,
-	consultationLink: "https://wa.me/6282199448180?text=halo%20Thuuba,%20Saya%20Ingin%20Konsultasi",
+	consultationLink: "https://wa.me/6282199448180?text=Hello%20Thuuba Digital,%20I%20Want to%20Book a Consulation",
 }
